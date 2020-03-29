@@ -6,19 +6,18 @@ const {
   Menu,
   session
 } = require("electron");
-
-  const { isDev } = require('./env');
+const path = require('path');
+const { isDev } = require("./env");
 
 const windowStateKeeper = require("electron-window-state");
 
 module.exports = function main() {
-  //   const url =
-  //   isDev && process.env.DEV_SERVER
-  //     ? 'http://localhost:4000' // TODO: find a solution to use host and port based on make config.
-  //     : 'file://' + path.join(__dirname, '..', 'dist', 'index.html');
+  const url =
+    isDev && process.env.DEV_SERVER
+      ? "http://localhost:3000" // TODO: find a solution to use host and port based on make config.
+      : "file://" + path.join(__dirname, "..", "dist", "index.html");
 
-  const url = "http://localhost:3000";
-
+  console.log("current url: \t" + url);    
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is GCed.
   let mainWindow = null;
