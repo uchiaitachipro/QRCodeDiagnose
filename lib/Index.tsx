@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Hello from './Hello'
+import SwitchButton from './SwitchButton'
+
+
 
 ReactDOM.render(
-    <Hello name="Electron powered by React"/>,
+    <SwitchButton/>,
     document.querySelectorAll('.app')[0]
 )

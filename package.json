@@ -4,9 +4,9 @@
   "description": "",
   "main": "desktop/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development --config  ./webpack/webpack.config.js --content-base dist --host 127.0.0.1 --port 3000",
-    "build": "cross-env NODE_ENV='production' webpack --mode=production --config ./webpack/webpack.config.js",
-    "debug": "cross-env NODE_ENV='development' webpack --mode=development --config ./webpack/webpack.config.js"
+    "dev": "webpack-dev-server --mode=development --config  ./build/webpack.config.js --content-base dist --host 127.0.0.1 --port 3000",
+    "build": "cross-env NODE_ENV='production' webpack --mode=production --config ./build/webpack.config.js",
+    "debug": "cross-env NODE_ENV='development' webpack --mode=development --config ./build/webpack.config.js"
   },
   "author": "",
   "license": "ISC",
