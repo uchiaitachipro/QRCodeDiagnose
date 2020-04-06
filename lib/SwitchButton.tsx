@@ -13,7 +13,9 @@ class SwitchButton extends React.Component<any, any> {
     let open = this.state.open,
       className = open ? "switch-button open" : "btn-switch";
     return (
-      <label className={className} onClick={this.handleClick}>
+      <label className={className} onClick={
+          this.handleClick
+          }>
         {" "}
         <input type="checkbox" checked={open} /> 男{" "}
       </label>

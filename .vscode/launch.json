@@ -31,7 +31,7 @@
           // "webpack:///./*": "${webRoot}/*",
           // "webpack:///src/*": "${webRoot}/*",
           // "webpack:///*": "*",
-          "webpack:///./*": "${webRoot}/lib/*",
+          "webpack:///./lib/*": "${webRoot}/lib/*",
           "webpack:///./~/*": "${webRoot}/node_modules/*",
           "meteor://💻app/*": "${webRoot}/*"
         }
