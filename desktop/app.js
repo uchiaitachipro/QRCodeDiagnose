@@ -17,6 +17,7 @@ module.exports = function main() {
       ? "http://localhost:3000" // TODO: find a solution to use host and port based on make config.
       : "file://" + path.join(__dirname, "..", "dist", "index.html");
 
+      
   console.log("current url: \t" + url);    
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is GCed.

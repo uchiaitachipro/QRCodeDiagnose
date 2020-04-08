@@ -1,11 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import SwitchButton from './SwitchButton'
-
-
+import Guide from './ClickGuide'
 
 ReactDOM.render(
-    <SwitchButton/>,
+    <Guide content="Rect"/>,
     document.querySelectorAll('.app')[0]
 )

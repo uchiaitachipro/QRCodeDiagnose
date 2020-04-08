@@ -4,12 +4,15 @@ const path = require('path');
 const outputDir = path.resolve(__dirname,'..');
 
 module.exports = {
+  
   entry: ["./lib/Index.tsx"],
+
   output: {
     path: outputDir + "/dist",
     filename: "app.[hash].js",
     chunkFilename: "[name].[chunkhash].js"
   },
+
   module: {
     rules: [
       {
@@ -23,10 +26,12 @@ module.exports = {
       }
     ]
   },
+
   resolve: {
     extensions: [".js", ".jsx", ".json", ".scss", ".css", ".ts", ".tsx"],
     modules: ["node_modules"]
   },
+
   plugins: [new HtmlWebpackPlugin({
     template: './lib/index.html'
   })]
