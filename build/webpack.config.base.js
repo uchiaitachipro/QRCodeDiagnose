@@ -5,7 +5,7 @@ const outputDir = path.resolve(__dirname,'..');
 
 module.exports = {
   
-  entry: ["./lib/Index.tsx"],
+  entry: ["./lib/index.tsx"],
 
   output: {
     path: outputDir + "/dist",

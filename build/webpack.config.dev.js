@@ -10,15 +10,14 @@ const devConfig = {
           {
             loader: "css-loader",
             options: {
-              sourceMap: true
-            }
-          }
-
-        ]
-      }
-    ]
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
   },
-  devServer: { inline: true }
+  devServer: { inline: true },
 };
 
 module.exports = devConfig;

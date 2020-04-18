@@ -1,0 +1,9 @@
+{
+    "flag" : 0,
+    "data" : {
+        "userId": 646464,
+        "userName": "Test Account",
+        "userAvatar": "https://s.gravatar.com/avatar/eccef205a5a70e3cc88ec69403da8d25?size=496&default=retro"
+    },
+    "msg" : ""
+}
