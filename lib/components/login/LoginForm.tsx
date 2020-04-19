@@ -2,8 +2,10 @@
 import React from "react";
 import {Dispatch,bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
+
 import { Card } from "antd";
 import { Form, Input, Button, Checkbox, Radio, Row, Col, message } from "antd";
+
 import { Store  } from "antd/lib/form/interface";
 import { ILogin ,LoginFormInfo} from "../../interfaces/User";
 import "../../../resources/App.css";
@@ -11,6 +13,8 @@ import {
     getLocalRecord,
     login
 } from "../../redux/login/index"
+import {History} from 'history'
+
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 
@@ -31,8 +35,9 @@ const tailLayout = {
 
 interface Props{
     getLocalInfo():void
-    onLogin(loginFormInfo: LoginFormInfo) : void 
+    onLogin(loginFormInfo: LoginFormInfo,history : History) : void 
     loginInfo : ILogin
+    history: History
 }
 
 
@@ -44,7 +49,7 @@ class LoginFormBox extends React.Component<Props, ILogin> {
         name : values.username,
         password : values.password,
         isChecked : values.remember
-    })
+    },this.props.history)
   };
 
   onFinishFailed = (errorInfo: any) => {

@@ -14,7 +14,7 @@ import {
 import { LOGIN_URL } from "../../constants/urls";
 import { get } from "../../utils/request";
 import { AxiosResponse } from "axios";
-
+import {History} from 'history'
 type Action = {
   type: string;
   payload: UserOptAction;
@@ -41,14 +41,16 @@ export function getLocalRecord() {
   };
 }
 
-export function login(loginFormInfo: LoginFormInfo) {
+export function login(loginFormInfo: LoginFormInfo,history : History) {
   return (dispatch: Dispatch) => {
     get(LOGIN_URL, loginFormInfo)
       .then((res: AxiosResponse<UserResponse>) => {
-        dispatch({
-          type: LOGIN_SUCCESS_ACTION,
-          payload: res.data,
-        });
+        // dispatch({
+        //   type: LOGIN_SUCCESS_ACTION,
+        //   payload: res.data,
+        // });
+        //todo: 存储数据
+          history.push('/home')
       })
       .catch((error) => {
         console.log(error);
