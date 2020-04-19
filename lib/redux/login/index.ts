@@ -50,7 +50,7 @@ export function login(loginFormInfo: LoginFormInfo,history : History) {
         //   payload: res.data,
         // });
         //todo: 存储数据
-          history.push('/home')
+          history.push('/home/news')
       })
       .catch((error) => {
         console.log(error);
